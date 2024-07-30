@@ -1,0 +1,2 @@
+no halt instruction
+unused label at line no : 2

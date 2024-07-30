@@ -1,0 +1,105 @@
+/*****************************************************************************
+TITLE: Claims																																
+AUTHOR:  G TEJA VARDHAN REDDY
+ID:2001CS26
+Declaration of Authorship
+This txt file, claims.txt, is part of the assignment of CS322 at the 
+department of Computer Science and Engg, IIT Patna . 
+*****************************************************************************/
+
+Files:
+==========
+*All the files i submitted, asm.cpp and claims.txt, have my name and student id at the start, along with a declaration of authorship.
+
+The evidence for Assembler including the output files from the 5 (eg five)  test examples has also been uploaded. They are test1(3 output files), test2(1 output files), test3
+(3 output file), test4(3 output files) and bubble(3 output files). All the test files have been tested and work properly.
+* c++ program did not show any errors and warnings when i compiled it with
+gcc -std=c89 -pedantic and gcc -std=c89 -pedantic -W -Wall -Wpointer-arith -Wwrite-strings -Wstrict-prototypes standard  or equilvalent ....or gcc ... or g++
+
+* program is compilable with g++ asm.cpp -o asm .
+
+
+=============================
+Program format and structure:
+=============================
+1. The assembler:
+
+    * with two data structures to store respectively labels and mnemonic table with expected operands.
+    * uses a single routine for both passes.
+    * detects label erros.
+    * consistent and sensible formatting with sensible program structure. 
+    * sensible variable, function & type names with explanatory comments.
+		* advanced listing file.
+		* assembles test programs.
+	  * can implements and demonstrates the instruction SET.
+
+
+
+
+=============================
+Testing:
+=============================
+
+1. The assembler:
+
+I have tested   five examples shown as bellow. The errors only occurred in the file test2.asm and 
+the program immediately stopped on the second pass. 
+
+The others were tested without any errors detected and produced three output files, listing file, 
+error log file and machine readable object file, for each example. 
+
+After comparing the listing files and object file of memcpy.asm , memcpy.l, triangle.l memcpy.o 
+with the implemented result given on the assignment, both of them show no difference 
+from those provided( if there is different  that is fine too) 
+ 
+NOTE: WARNINGS WILL NOT BE DIPLAYED ON OUTPUT WINDOW BUT ARE VSISBLE IN LOG FILE
+
+C:\Users\tejav\Downloads>g++ asm.cpp -o asm
+
+C:\Users\tejav\Downloads>asm test1.asm
+#output:
+.....................................................
+Compiled without errors!!!
+.....................................................
+
+2:
+#input:
+C:\Users\tejav\Downloads>asm test2.asm
+#output:
+Failed to Assemble!!
+Error at Line 4 :  label name is found twice(duplicate)  at line no's 4 and 3
+Error at Line 6 :  operand should be a label or number at line no 6
+Error at Line 7 :  operand should be provided at line no 7
+Error at Line 8 :  operand should  NOT be provided at line no 8
+Error at Line 9 :  operand should be a label or number at line no 9
+Error at Line 9 : Extra operand on end of line
+Error at Line 10 :  label name is not valid  at line no 10
+Error at Line 11 :  mnemonic name is not valid  at line no 11
+Error at Line 12 :  mnemonic name is not valid  at line no 12
+
+3:
+#input:
+C:\Users\tejav\Downloads>asm test3.asm
+#output:
+.....................................................
+Compiled without errors!!!
+.....................................................
+
+4:
+#input
+C:\Users\tejav\Downloads>asm test4.asm
+#output:
+.....................................................
+Compiled without errors!!!
+.....................................................
+5:
+#input:
+C:\Users\tejav\Downloads>asm bubble.asm
+#output:
+.....................................................
+Compiled without errors!!!
+.....................................................
+
+
+
+
